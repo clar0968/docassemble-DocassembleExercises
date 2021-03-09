@@ -1,0 +1,33 @@
+---
+# My first docassemble program
+mandatory: True
+question: Hello World!
+subquestion: |
+  Hello **${fName + ' ' + lName}**,
+  
+  Welcome to Docassemble!
+
+  Column1|Column2
+  -------|-------
+  First Name|${ salutation + ' ' + fName + ' ' + lName}
+  Age|${ age }
+  
+buttons:
+  - I'm done: exit
+    url: https://flinders.edu.au
+  - Do it again: restart
+---
+question: Name
+subquestion: |
+  Please enter your full name, including your middle name if you have one
+fields:
+  - First Name: fName
+  - Last Name: lName
+  - Salutation: salutation
+    choices:
+      - Dr
+      - Mr
+      - Mrs
+      - Ms
+  - Age: age
+---
